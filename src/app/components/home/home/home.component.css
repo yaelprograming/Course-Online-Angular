@@ -1,0 +1,37 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+ 
+  
+  .button-container {
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+  }
+
+   .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 100vh;
+    text-align: center;
+    background-image: url(../../../../../public/images/background2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* חשוב כדי שהכפתורים יהיו ממוקמים יחסית ל-container */
+    padding: 20px;
+  }
+
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }

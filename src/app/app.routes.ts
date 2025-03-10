@@ -12,8 +12,8 @@ import { AuthComponent } from './components/auth/auth.component';
 
 export const routes: Routes = [
     {
-        path: '', component: HomeComponent, canActivate: [authGuard],
-        children: [
+        path: '', component: HomeComponent, canActivate: [authGuard]
+       , children: [
             { path: 'about', component: AboutComponent },
             { path: 'courses', component: CoursesListComponent },
             { path: 'courses/:id/lessons', component: EditCourseComponent },

@@ -6,7 +6,7 @@
 </mat-toolbar>
 <router-outlet></router-outlet>
 
-<div class="login-container">
+<!-- <div class="login-container">
     <h1>Welcome to Online Courses</h1>
     <p>Join us and start learning today!</p>
     <div class="example-button-container">
@@ -20,4 +20,22 @@
           login
         </a>
       </div>
+  </div> -->
+
+
+  
+  <div class="login-container">
+    <!-- <h1>Welcome to Online Courses</h1>
+    <p>Join us and start learning today!</p> -->
+    <div class="button-container">
+      <a mat-fab extended color="primary" routerLink="/SignUp" (click)="userService.updateStatus('register')">
+        Get Started
+        <mat-icon>login</mat-icon>
+      </a>
+    </div>
+    <div class="button-container">
+      <a mat-fab extended color="accent" routerLink="/login" routerLinkActive="active" (click)='login()'>
+        Login
+      </a>
+    </div>
   </div>
