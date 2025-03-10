@@ -1,0 +1,38 @@
+<form [formGroup]="authForm" (submit)="submit()">
+    @if(status === 'register'){
+        <mat-form-field appearance="fill">
+          <mat-label>Your name</mat-label>
+          <input formControlName="name" matInput>
+        </mat-form-field>
+        }
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input formControlName="email" matInput placeholder="email" (blur)="updateErrorMessage()" required />
+            @if(authForm.get('email')?.invalid && authForm.get('email')?.touched)
+            {
+            <mat-error>
+                Email is required
+            </mat-error>}
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input formControlName="password" matInput [type]="hide() ? 'password' : 'text'" />
+            <button mat-icon-button matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide()">
+              <mat-icon>{{ hide() ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          @if(status == 'register'){
+            <mat-form-field appearance="fill">
+              <mat-label>Select</mat-label>
+              <mat-select formControlName="role">
+                <mat-option value="student">student</mat-option>
+                <mat-option value="principal">principal</mat-option>
+                <mat-option value="teacher">teacher</mat-option>
+              </mat-select>
+            </mat-form-field>
+            }
+            <button mat-raised-button color="primary" [disabled]="authForm.invalid" type="submit">{{status=='register'?'Sign Up':'Login'}}</button>
+</form>

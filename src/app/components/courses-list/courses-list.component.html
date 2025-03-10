@@ -1,0 +1,31 @@
+@if(isTeacher){
+    <a mat-button [routerLink]="['/courses/add']" routerLinkActive="active">Add</a>}
+<div class="container">
+    @for(course of listCourses ; track course.id) {
+        <mat-card class="mat-card" appearance="outlined">
+            <mat-card-header>
+                <mat-card-title> Course: {{course.title}}</mat-card-title>
+                <mat-card-subtitle>{{course.description}}</mat-card-subtitle>
+                <mat-card-subtitle>Teacher: {{course.teacherId}}</mat-card-subtitle>
+            </mat-card-header>
+            <br>
+            <mat-toolbar color="primary" class="nav-container">
+                <nav class="nav-links"> 
+                    <a mat-button [routerLink]="['/courses', course.id, 'lessons']" routerLinkActive="active">See lessons</a>
+                    @if(isTeacher){
+                        <a mat-button [routerLink]="['/courses', course.id, 'update']" routerLinkActive="active">Update course</a>
+                        <button mat-button (click)="deleteCourse(course.id)">Delete course</button>
+                    }
+                    @else{
+                        @if(isJoin(course)){
+                            <button mat-button (click)="leave(course)">Leave course</button>
+                        }
+                        @else{
+                            <button mat-button (click)="join(course)">Join course</button>
+                        }
+                    }
+                </nav>
+            </mat-toolbar> 
+        </mat-card>
+    }
+</div>

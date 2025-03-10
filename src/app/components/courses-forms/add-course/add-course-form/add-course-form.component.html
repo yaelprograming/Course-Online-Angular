@@ -1,0 +1,26 @@
+<div class="form-container">
+    <form [formGroup]="courseForm" (submit)="addCourse()">
+        <mat-form-field appearance="fill">
+            <mat-label>title </mat-label>
+            <input matInput type="text" formControlName="title" required>
+            @if(this.courseForm.get('title')?.invalid && courseForm.get('title')?.touched)
+            {
+            <mat-error>
+                title is required
+            </mat-error>}
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>description</mat-label>
+            <input matInput type="text" formControlName="description" required>
+            @if(this.courseForm.get('description')?.invalid && courseForm.get('description')?.touched)
+            {
+            <mat-error>
+                description is required
+            </mat-error>}
+        </mat-form-field>
+        <button mat-raised-button [disabled]="courseForm.invalid" type="submit">Add</button>
+        <br />
+
+    </form>
+</div>

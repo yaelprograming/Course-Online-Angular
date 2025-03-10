@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="nav-container" >
+    <nav class="nav-links">
+        <a mat-button routerLink="/about" routerLinkActive="active" >About</a>
+        <a mat-button routerLink="/courses" routerLinkActive="active">Our courses</a>
+    </nav>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+<div class="login-container">
+    <h1>Welcome to Online Courses</h1>
+    <p>Join us and start learning today!</p>
+    <div class="example-button-container">
+        <a mat-fab extended routerLink="/SignUp" (click)="userService.updateStatus('register')">
+            Get Started
+            <mat-icon>login</mat-icon>
+        </a>
+    </div>
+    <div class="example-button-container">
+        <a mat-fab extended routerLink="/login" routerLinkActive="active" (click)='login()'>
+          login
+        </a>
+      </div>
+  </div>
