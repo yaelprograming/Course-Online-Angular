@@ -11,20 +11,36 @@ import { EditCourseComponent } from './components/course-details/course-details/
 import { AuthComponent } from './components/auth/auth.component';
 
 export const routes: Routes = [
+    //     {
+    //         path: '', component: HomeComponent, canActivate: [authGuard]
+    //        , children: [
+    //             { path: 'about', component: AboutComponent },
+    //             { path: 'courses', component: CoursesListComponent },
+    //             { path: 'courses/:id/lessons', component: EditCourseComponent },
+    //             { path: 'courses/add', component: AddCourseFormComponent },
+    //             { path: 'courses/:id/update', component: UpdateCourseFormComponent },
+    //             { path: 'courses/:id/lessons/:lessonId/update', component: UpdateLessonFormComponent },
+    //             { path: 'courses/:id/lessons/add', component: AddLessonFormComponent }
+    //         ]
+    //     },
+    //     { path: 'login', component: AuthComponent },
+    //    {path:'SignUp',component:AuthComponent},
+
     {
         path: '', component: HomeComponent, canActivate: [authGuard]
-       , children: [
-            { path: 'about', component: AboutComponent },
-            { path: 'courses', component: CoursesListComponent },
-            { path: 'courses/:id/lessons', component: EditCourseComponent },
-            { path: 'courses/add', component: AddCourseFormComponent },
-            { path: 'courses/:id/update', component: UpdateCourseFormComponent },
-            { path: 'courses/:id/lessons/:lessonId/update', component: UpdateLessonFormComponent },
-            { path: 'courses/:id/lessons/add', component: AddLessonFormComponent }
-        ]
     },
+
+    { path: 'about', component: AboutComponent },
+    { path: 'courses', component: CoursesListComponent },
+    { path: 'courses/:id/lessons', component: EditCourseComponent },
+    { path: 'courses/add', component: AddCourseFormComponent },
+    { path: 'courses/:id/update', component: UpdateCourseFormComponent },
+    { path: 'courses/:id/lessons/:lessonId/update', component: UpdateLessonFormComponent },
+    { path: 'courses/:id/lessons/add', component: AddLessonFormComponent },
+
+
     { path: 'login', component: AuthComponent },
-   {path:'SignUp',component:AuthComponent},
+    { path: 'signup', component: AuthComponent },
 ];
 
 

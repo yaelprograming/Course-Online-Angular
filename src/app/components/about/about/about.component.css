@@ -1,53 +1,66 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+/* .about-card {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  mat-card-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+   */
 
-/* עיצוב הקונטיינר עם תמונת הרקע */
-.background {
+/* עיצוב הבאנר */
+.banner {
     position: relative;
     width: 100%;
-    height: 100vh;
-    /* background: url('.jpg') no-repeat center center/cover; */
-}
-
-/* עיצוב הטקסט */
-.about-container {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .banner-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6); /* רקע כהה שקוף לשיפור הקריאות */
-    padding: 30px;
-    border-radius: 10px;
     color: white;
-    text-align: center;
-    max-width: 600px;
-}
-
-.about-container h2 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.about-container p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-.about-container ul {
-    list-style: none;
-    padding: 0;
-}
-
-.about-container li {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* עיצוב הכרטיס */
+  .about-card {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  mat-card-content {
     font-size: 1.1rem;
-    margin: 8px 0;
-}
-
-.about-container li::before {
-    content: "✔️"; /* הוספת אייקון לכל שורה */
-    margin-right: 8px;
-}
+    line-height: 1.6;
+    color: #555;
+  }
+  

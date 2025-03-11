@@ -1,0 +1,79 @@
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .course-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: scale(1.05);
+  }
+  
+  mat-card-header {
+    background-color: #e3f2fd; /* Light Blue */
+    text-align: center;
+  }
+  
+  mat-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  mat-card-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  mat-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  nav a.mat-button, nav button.mat-button {
+    margin: 5px;
+  }
+  
+  .add-course-btn {
+    margin: 20px 0;
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  button.mat-button {
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  nav a.mat-button, nav button.mat-button {
+    font-size: 1rem;
+    color: #1976d2;
+  }
+  
+  nav a.mat-button:hover, nav button.mat-button:hover {
+    background-color: #e3f2fd;
+  }
+  
+  /* סגנון ייחודי לכפתור מחיקת הקורס */
+  .delete-course-btn {
+    margin-top: 10px;
+    background-color: #1976d2; /* אדום כהה */
+    color: white;
+    width: 100%;
+  }
+  
+  .delete-course-btn:hover {
+    background-color: #07294b;
+  }
+  
